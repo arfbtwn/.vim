@@ -1,4 +1,6 @@
-autocmd BufNewFile,BufRead * call Detect()
+augroup filetype
+    au! BufNewFile,BufRead * call Detect()
+augroup end
 
 function Detect()
     if did_filetype()
